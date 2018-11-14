@@ -1,0 +1,281 @@
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    transition: 5s ease-in-out!important;
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: $black;
+        transition: 5s ease-in-out!important;
+        z-index: 1000;
+
+    }
+
+    &.complate:before{
+        left: -50%;
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background: $black;
+        transition: 5s ease-in-out!important;
+        z-index: 1000;
+    }
+
+    &.complate:after{
+        right: -50%;
+    }
+
+}
+
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    animation: Loading 4s linear infinite;
+    z-index:10000;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        animation: LoaderBg 4s linear infinite;
+    }
+}
+
+.preloader.complate{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes Loading {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+
+    }
+    25%{
+        transform: translate(-50%, -50%) rotate(180deg);
+
+    }
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);
+
+    }
+    75%{
+        transform: translate(-50%, -50%) rotate(360deg);
+
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+
+    }
+}
+
+@keyframes LoaderBg {
+    0%{
+        height: 0;
+
+    }
+    25%{
+
+        height: 0;
+    }
+    50%{
+
+        height: 100%;
+    }
+    75%{
+
+        height: 100%;
+    }
+    100%{
+
+
+    }
+}
+
+.about-me{
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+
+    #particles-js
+    {
+        width: 100%;
+        height: 100vh;
+        background: #000;
+
+    }
+
+    .about{
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        right: 5%;
+        z-index: 10;
+
+
+
+        h1{
+            font-size: 1.7rem;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+
+        }
+
+    }
+
+}
+
+.fa-arrow-circle-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hide{
+    opacity: 0;
+}
+
+
+@media(min-width:576px){
+    .about{
+        top: 25%!important;
+    }
+
+
+    .fa-arrow-circle-down{
+        position: absolute;
+        animation: up-down 1s infinite linear;
+    }
+
+    @keyframes up-down {
+        0% {
+            bottom: 5px;
+        }
+        10% {
+            bottom: 5px;
+        }
+        30% {
+            bottom: 10px;
+        }
+        60% {
+            bottom: -10px;
+        }
+        80% {
+            bottom: -5px;
+        }
+        100% {
+            bottom: 3px;
+        }
+    }
+}
+
+@media(min-width:768px){
+    .about{
+        top: 20%!important;
+    }
+}
+
+@media(min-width:1200px){
+    .about{
+        top: 50%!important;  
+        transform: translateY(-50%);
+
+        h1{
+            font-size: 4rem!important;
+        }
+
+        p{
+            font-size: 1.5rem!important;
+
+        }
+
+        .social-icons .fa{
+            font-size: 4rem;
+            transition: 0.5s ease;
+
+            &:hover{
+                animation: shake 0.5s infinite; 
+            }
+        }
+
+        .fa-linkedin:hover{
+            color: #4875B4!important;
+            animation: shake 0.5s infinite;  
+        }
+
+        .fa-skype:hover{
+            color: #00aff0!important;
+            animation: shake 0.5s infinite;
+
+        }
+    }
+
+    @keyframes shake {
+        0% {
+            transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+            transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+            transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+            transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+            transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+            transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+            transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+            transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+            transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+            transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+            transform: translate(1px, -2px) rotate(-1deg);
+        }
+    }
+
+    .fa-arrow-circle-down{
+        font-size: 4rem!important;
+    }
+}
+
+

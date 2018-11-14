@@ -1,0 +1,48 @@
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index:-1000;
+    padding:200px 0;
+
+
+    .footer-logo{
+        font-family: 'DeadStock' , sans-serif;
+        color: $white;
+        font-size: 2rem;
+        
+        
+    }
+
+    i{
+        font-size: 1.5rem;
+        margin-right: 20px !important;
+    }
+}
+
+@media(min-width:768px){
+    footer{
+
+        i{
+            margin-right: 10px!important;
+        }
+
+        p{
+            font-size: 0.8rem!important;
+        }
+    }
+}
+
+@media(min-width:992px){
+    footer{
+        
+        i{
+            margin-right: 20px!important;
+        }
+
+        p{
+            font-size: 1rem!important;
+        }
+    }
+}

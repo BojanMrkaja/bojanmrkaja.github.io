@@ -1,0 +1,50 @@
+.contact{
+    margin-bottom: 350px!important;
+    background:$white;
+
+    h2{
+        font-size: 2rem;
+
+    }
+
+    .form-group{
+        position: relative;
+
+        label{
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            transition: 0.5s ease;
+        }
+
+        .form-control{
+            border-color: $black;
+            border-radius: 0!important;
+
+            &:focus{
+                box-shadow:none!important;
+            }
+
+            &:focus ~ label,&:focus ~ label,&:valid ~ label{
+                top: -30px;
+                color: $white;
+                background: $black;
+                padding: 5px!important;
+            }
+        } 
+
+        .btn{
+            border-radius: 0px!important;
+
+            &:hover{
+                background: #000!important;
+            }
+        }
+    }
+}
+
+@media(min-width:768px){
+    .contact{
+         margin-bottom: 250px!important;
+    }
+}
