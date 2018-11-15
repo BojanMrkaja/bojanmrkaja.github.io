@@ -110,8 +110,9 @@ $(document).ready(function () {
         }
     });
     
+    
     function complateClass(){
-        $('.preloader').addClass('complate'); 
+        $('.preloader').addClass('complate');
     }
     
     $(window).on('load', setTimeout(complateClass, 2000));

@@ -3,7 +3,8 @@
 font-family: 'Oswald', sans-serif;
 font-family: 'Indie Flower', cursive;*/
 html {
-  font-size: 14px; }
+  font-size: 14px;
+  overflow-x: hidden; }
 
 p, label {
   font-family: 'Montserrat', sans-serif !important; }
@@ -327,7 +328,7 @@ a:hover, a:focus, a:visited {
     .landing-page .wrapper h2.txt {
       position: absolute;
       left: 10%;
-      font-family: 'Indie Flower', cursive;
+      font-family: "Montserrat", sans-serif !important;
       border-right: 1px solid #fff; }
     .landing-page .wrapper .enter {
       position: absolute;
@@ -923,7 +924,7 @@ footer {
     font-size: 2rem; }
   footer i {
     font-size: 1.5rem;
-    margin-right: 20px !important; }
+    margin-right: 15px !important; }
 
 @media (min-width: 768px) {
   footer i {
