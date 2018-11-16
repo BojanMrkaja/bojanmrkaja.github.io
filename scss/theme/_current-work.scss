@@ -6,6 +6,7 @@
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+     z-index: 100;
     
        &:before{
         content: '';

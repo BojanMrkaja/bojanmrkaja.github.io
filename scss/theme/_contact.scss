@@ -1,10 +1,11 @@
 .contact{
     margin-bottom: 350px!important;
     background:$white;
-
+    z-index: 100;
+    position: relative;
+    
     h2{
         font-size: 2rem;
-
     }
 
     .form-group{

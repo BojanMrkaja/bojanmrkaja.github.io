@@ -590,7 +590,8 @@ path {
   width: 100%;
   height: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 100; }
   .about-me #particles-js {
     width: 100%;
     height: 100vh;
@@ -690,7 +691,8 @@ path {
   background-repeat: no-repeat;
   background-size: cover !important;
   position: relative;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  z-index: 100; }
   .my-skills h2 {
     position: relative;
     z-index: 10;
@@ -841,7 +843,8 @@ path {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  position: relative; }
+  position: relative;
+  z-index: 100; }
   .current-work:before {
     content: '';
     position: absolute;
@@ -883,7 +886,9 @@ path {
 
 .contact {
   margin-bottom: 350px !important;
-  background: #fff; }
+  background: #fff;
+  z-index: 100;
+  position: relative; }
   .contact h2 {
     font-size: 2rem; }
   .contact .form-group {
@@ -916,7 +921,7 @@ footer {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: -1000;
+  z-index: 2;
   padding: 200px 0; }
   footer .footer-logo {
     font-family: 'DeadStock' , sans-serif;
