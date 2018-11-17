@@ -685,6 +685,9 @@ path {
       transform: translate(1px, -2px) rotate(-1deg); } }
   .fa-arrow-circle-down {
     font-size: 4rem !important; } }
+@media (max-height: 480px) {
+  .about {
+    top: 0% !important; } }
 .my-skills {
   padding: 90px 0;
   background-image: url("../img/img7.jpg");
