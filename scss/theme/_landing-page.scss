@@ -5,8 +5,8 @@
     background-position-x: -200px;
     height: 100vh;
     width: 100vw;
- 
- 
+
+
     &:after{
         content: '';
         position: absolute;
@@ -17,28 +17,110 @@
         height: 100vh;
         z-index: 1;
     }
-    
+
     .wrapper{
         z-index: 2;
         position: relative;
         padding: 100px 0; 
-        
-        
-        
+
+
+
         h2.txt{
-          position: absolute;
-          left: 10%;
-          font-family: 'Montserrat', sans-serif!important;
-          border-right:1px solid $white;
+            position: absolute;
+            left: 5%;
+            font-family: 'Montserrat', sans-serif!important;
+            border-right:1px solid $white;
+            font-size: 1.5rem;
         }
-        
+
         .enter{
             position: absolute;
             bottom: 0;
             right: 50%;
             transform: translateX(50%);
-           
+/*            border: none!important;*/
+            padding:10px;
+            overflow: hidden;
+            font-size:1.25rem;
+            
+
+            span{
+                display: block;
+                background: $white;
+                transition: .2s;
+                
+                
+
+                &:nth-child(1),
+                    &:nth-child(3){
+                    position: absolute;
+                    height: 2px;
+                    width: 100%;
+                }
+
+
+                &:nth-child(2),
+                    &:nth-child(4){
+                    position: absolute;
+                    height: 100%;
+                    width: 2px;
+                }
+
+                &:nth-child(1){
+                    top: 0;
+                    left: -100%;
+                    transition-delay: 0s;
+
+                }
+
+                &:nth-child(2){
+                    top: -100%;
+                    right: 0;
+                    transition-delay: .2s;
+                }
+
+                &:nth-child(3){
+                    bottom: 0;
+                    right: -100%;
+                     transition-delay: .4s; 
+
+                }
+
+                &:nth-child(4){
+                    bottom: -100%;
+                    left: 0;
+                     transition-delay: .6s;
+                }
+
+            }
+
+            &:hover{
+                background: transparent!important;
+                color: $white;
+            }
         }
+    }
+
+    a.enter:hover span:nth-child(1){
+        top: 0;
+        left: 0;
+
+    }
+
+    a.enter:hover span:nth-child(2){
+        top: 0;
+        right: 0;
+    }
+
+    a.enter:hover span:nth-child(3){
+        bottom: 0;
+        right: 0;
+
+    }
+
+    a.enter:hover span:nth-child(4){
+        bottom: 0;
+        left: 0;
     }
 
 }
@@ -149,7 +231,7 @@ path{
     .landing-page{
         background-position-x: 0;
     }
-    
+
     .wrapper{
         width: 80%;
     }
@@ -158,12 +240,12 @@ path{
 @media(min-width:768px){
     .wrapper{
         padding: 150px 0 !important;
-        
+
         .enter{
             padding: 1rem 1.3rem!important;
         }
     }
-   
+
     h2.txt{
         font-size: 3rem;
     }
@@ -172,6 +254,10 @@ path{
 @media(min-width:992px){
     .wrapper{
         padding: 200px 0!important;
+    }
+    
+    h2.txt{
+        font-size: 2.5rem!important;
     }
 }
 
