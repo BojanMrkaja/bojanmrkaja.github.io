@@ -1,9 +1,9 @@
-$(document).ready(function() {
+$(document).ready(function () {
   function animation() {
     var windowHeight = $(window).height();
     var scrollDown = $(window).scrollTop();
 
-    $(".animation").each(function() {
+    $(".animation").each(function () {
       var position = $(this).offset().top;
 
       if (position < scrollDown + windowHeight - 100) {
@@ -16,7 +16,7 @@ $(document).ready(function() {
   animation();
   counter();
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     animation();
     counter();
   });
@@ -27,26 +27,25 @@ $(document).ready(function() {
     var scrollDown = $(window).scrollTop();
     var position = $(".my-skills").offset().top;
     if (position < scrollDown + windowHeight - 50) {
-      $(".counter").each(function() {
+      $(".counter").each(function () {
         var $this = $(this),
           countTo = $this.attr("data-count");
 
-        $({ countNum: $this.text() }).animate(
-          {
-            countNum: countTo
+        $({
+          countNum: $this.text()
+        }).animate({
+          countNum: countTo
+        }, {
+          duration: 2000,
+          easing: "linear",
+          step: function () {
+            $this.text(Math.floor(this.countNum));
           },
-          {
-            duration: 2000,
-            easing: "linear",
-            step: function() {
-              $this.text(Math.floor(this.countNum));
-            },
-            complete: function() {
-              $this.text(this.countNum);
-              //alert('finished');
-            }
+          complete: function () {
+            $this.text(this.countNum);
+            //alert('finished');
           }
-        );
+        });
       });
     }
   }
@@ -62,18 +61,17 @@ $(document).ready(function() {
 
   //EASE SCROLL
 
-  $(document).on("click", 'a[href^="#"]', function(event) {
+  $(document).on("click", 'a[href^="#"]', function (event) {
     event.preventDefault();
 
-    $("html, body").animate(
-      {
+    $("html, body").animate({
         scrollTop: $($.attr(this, "href")).offset().top
       },
       1000
     );
   });
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll >= 400) {
       $(".skillbar").skillBars({
@@ -86,16 +84,21 @@ $(document).ready(function() {
   });
 
   //ADD HEADER STYLE ON SCROOL
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll > 400) {
-      $("nav").css({ top: "0px", background: "rgba(0,0,0,0.7)" });
+      $("nav").css({
+        top: "0px",
+        background: "rgba(0,0,0,0.7)"
+      });
     } else {
-      $("nav").css({ top: "-250px" });
+      $("nav").css({
+        top: "-250px"
+      });
     }
   });
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(document).scrollTop() > 100) {
       $(".about").fadeOut(1000);
     } else {
@@ -117,7 +120,7 @@ $(document).ready(function() {
 });
 
 //Type effect
-const TypeWriter = function(textElement, words, wait = 3000) {
+const TypeWriter = function (textElement, words, wait = 3000) {
   this.textElement = textElement;
   this.words = words;
   this.txt = "";
@@ -128,7 +131,7 @@ const TypeWriter = function(textElement, words, wait = 3000) {
 };
 
 //Type Method
-TypeWriter.prototype.type = function() {
+TypeWriter.prototype.type = function () {
   //Current index of word
   const current = this.wordIndex % this.words.length;
   //Get full text of current word
@@ -181,19 +184,20 @@ setTimeout(init, 7000);
 
 // HAMBURGER
 
-var forEach = function(t, o, r) {
+var forEach = function (t, o, r) {
   if ("[object Object]" === Object.prototype.toString.call(t))
     for (var c in t)
       Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t);
-  else for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t);
+  else
+    for (var e = 0, l = t.length; l > e; e++) o.call(r, t[e], e, t);
 };
 
 var hamburgers = document.querySelectorAll(".hamburger");
 if (hamburgers.length > 0) {
-  forEach(hamburgers, function(hamburger) {
+  forEach(hamburgers, function (hamburger) {
     hamburger.addEventListener(
       "click",
-      function() {
+      function () {
         this.classList.toggle("is-active");
       },
       false
