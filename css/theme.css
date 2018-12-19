@@ -995,5 +995,74 @@ footer {
     margin-right: 20px !important; }
   footer p {
     font-size: 1rem !important; } }
+/*html{
+     width: 100%;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}*/
+.cv {
+  width: 60%;
+  height: 100%;
+  background: #fff;
+  border: 20px solid #343a40;
+  margin: 0 auto; }
+  .cv .headings {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    border: 5px solid #343a40;
+    padding: 20px 50px; }
+    .cv .headings h1 {
+      font-weight: bold;
+      font-size: 3rem;
+      letter-spacing: 5px; }
+  .cv .info {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px !important; }
+    .cv .info a {
+      color: inherit; }
+  .cv .profile {
+    flex-basis: 50%; }
+  .cv h3 {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 20px !important;
+    font-weight: bold; }
+    .cv h3:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 20%;
+      height: 5px;
+      background-color: #343a40; }
+  .cv .html-skill,
+  .cv .css-skill {
+    width: 90%;
+    height: 10px;
+    background-color: #343a40; }
+  .cv .js-skill,
+  .cv .jQuery-skill,
+  .cv .sass-skill,
+  .cv .git-skill,
+  .cv .npm-skill {
+    width: 70%;
+    height: 10px;
+    background-color: #343a40; }
+  .cv .bootstrap-skill {
+    width: 80%;
+    height: 10px;
+    background-color: #343a40; }
+  .cv .wordpress-skill,
+  .cv .photoshop-skill,
+  .cv .illustrator-skill {
+    width: 40%;
+    height: 10px;
+    background-color: #343a40; }
 
 /*# sourceMappingURL=theme.css.map */
